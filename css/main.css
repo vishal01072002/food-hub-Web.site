@@ -1,0 +1,298 @@
+/* css reset */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* for smothing scroll */
+html{
+    scroll-behavior: smooth;
+}
+
+/* navigation bar */
+#navigation{
+    display: flex;
+    align-items: center;
+    /* its for first then change in stickey */
+    /* position: relative; */
+    position: sticky;
+    /* width: 100%; */
+    top: 0px;
+    z-index: 2;
+}
+
+/* logo designing */
+#logo{
+    margin: 3px 7px;
+}
+
+#logo img{
+    height: 65px; 
+    width: 65px;
+    /* margin: 4px 4px; */
+}
+
+
+/* navigation list items */
+
+#navigation ul{
+    display: flex;
+}
+
+#navigation ul li{
+    list-style: none;
+    font-weight: 900;
+}
+
+#navigation ul li a{
+    text-decoration: none;
+    display: block;
+    font-size: 1.9rem;
+    padding: 2px 30px;
+    margin: 7px 5px;
+    border-radius: 15px;
+    /* color: darkorange; */
+    color: rgb(255, 207, 104);
+    background-color: rgba(14, 14, 14, 0.596);
+    text-shadow: 1px 1px rgb(245, 8, 8);
+    font-family: monospace;
+    z-index: -1;
+}
+
+/* for hover on a (list items of nav) */
+#navigation ul li a:hover{
+    color: darkorange;
+    background-color: rgb(0, 0, 0);
+}
+
+/* navbar baground strip */
+#navigation::before{
+    content: "";
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+    opacity: 65%;
+
+    top: 0px;
+    left: 0px;
+}
+
+/* Home section css */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 9px 150px;
+    height: 532px;
+    /* text-align: center; not use in home */
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url("bg-img/bg1.jpg")
+    no-repeat center/cover ;
+    /* cover means it cover all size of div */
+    /* background-size: cover; */
+    height: 625px;
+    width: 100%;
+
+    position: absolute;
+    z-index: -2;
+    opacity: 65%;
+
+    top: 0px;
+    left: 0px;
+}
+
+/* home heading */
+.h-first{
+    font-size: 3rem;
+    padding: 12px;
+    color: rgb(50, 40, 40);
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#home p{
+    font-size: 2rem;
+    color: rgb(30,11,77);
+    text-align: center;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.btn{
+    padding: 5px 20px;
+    margin: 35px;
+    border: 3px solid rgb(255, 255 ,255 , 72%);  
+    border-radius: 10px;
+    background-color: #e74d2a;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.btn:hover{
+    background-color: #bb2402;
+    cursor: pointer;
+}
+
+/* services section */
+.center{
+    text-align: center;
+}
+
+.h-second{
+    font-size: 3.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.h2-first{
+    font-size: 2.5rem;
+    padding-bottom: 5px;
+    font-family: -webkit-pictograph;
+    font-weight: bold;
+}
+
+#service{
+    margin: 12px;
+    display: flex;
+}
+
+#service .box1{
+     border: 3px solid #000881;
+     padding: 30px 15px;
+     margin: 10px 13px;
+     border-radius: 15px;
+     background-color: #ececec;
+}
+
+#box1-3 img{
+    padding: 0px 30px;
+}
+#service .box1 img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#service .box1 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-style: oblique;
+   font-weight: bold;
+   text-align: center;
+}
+
+/* follow us */
+#followus{
+    position: relative;
+    /* height: 250px; */
+}
+
+#follow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow-items{
+    padding: 3px 50px;
+    padding-bottom: 12px;
+}
+
+.follow-items img{
+    height: 105px;
+    border-radius: 6px;
+
+}
+
+#followus::before{
+    content: "";
+    position: absolute;
+    background: url('bg-img/follow1.jpg') no-repeat center center/cover
+     ;
+    width: 100%;
+    height: 99.2%;
+    z-index: -3;
+    opacity: 75%;
+}
+
+#followus h1{
+    color: white;
+    text-shadow: 4px 4px  black;
+}
+
+/* form of contact us */
+
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -4;
+    position: absolute;
+    background: url('bg-img/final3.jpg') no-repeat center center/cover;
+    opacity: 65%;
+
+}
+
+#contactbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    /* margin: 0rem -8rem; */
+}
+
+#contactbox input,
+#contactbox textarea{
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(3, 3, 0);
+    background-color:#d8d8d8;
+}
+
+#contactbox form{
+    width: 56%;
+
+}
+
+
+#contactbox label{
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#butn1 input{
+    width: 9rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgb(198, 199, 191);
+
+}
+
+#butn1 input:hover{
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 12px 25px;
+    font-size: 25px;
+}
